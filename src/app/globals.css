@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --color-texts-primary: #14151A;
+  --color-texts-secondary: #0F132499;
+  --color-texts-tertiary: #0D112666;
+  --color-texts-quaternary: #0A0F2940;
+  --color-texts-white: #FFFFFF;
+
+  --color-background-default: #FFFFFF;
+  --color-background-secondary: #F8FAFB;
+  --color-border-normal: #DEE0E3;
+  --color-border-base-alpha: #0A0F2914;
+  --color-button-primary: #225AEA;
+  --color-button-primary-hover: #1a44b1;
+  --color-button-secondary: #E3EAFD;
+  --color-button-tertiary: #0A0F290A;
+  --color-button-success: #D1FAE4;
+  --color-button-warning: #FEF4EC;
+  --color-button-error: #FF3B30;
+  --color-icons-base-grey: #6F717C;
+  --color-icons-base-green: #166E3F;
+  --color-icons-base-red: #D9281C;
+  --color-icons-base-yellow: #F48E2F;
+
+  --color-primary: #225AEA;
+  --color-success: #00a800;
+  --color-success-hover: #2c8a15;
+  --color-warning: #ffc107;
+  --color-error: #D9281C;
+}
+
+body {
+  color: var(--color-texts);
+  background: var(--color-background);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ================================================== */
+/* ============== NUMERIC INPUTS ==================== */
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* ============== NUMERIC INPUTS ==================== */
+/* ================================================== */
+
+/* ==================================================== */
+/* ============== SCROLLBAR STYLES ==================== */
+
+.TABLESCROLL::-webkit-scrollbar {
+  width: 4px;
+  height: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  background: var(--color-primary);
+  border-radius: 20px;
+}
+
+/* ============== SCROLLBAR STYLES ==================== */
+/* ==================================================== */
+
+
+/* ======================================================== */
+/* ================== X-Ray =============================== */
+
+@keyframes xray {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+.x-ray-drop-container {
+  border: 1px solid #f1f2f4;
+  height: 20rem;
+  background: linear-gradient(90deg, #f4f6fd 0%, #f4f6fa 50%, #215ce72c 100%);
+  background-size: 200% 100%;
+  animation: xray 5s ease infinite;
+  filter: blur(5px);
+}
+
+.invisible-input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.text-similiry-primary {
+  color: #009B3A;
+  background-color: #009B3A26;
+}
+
+.text-similiry-secondary {
+  color: #e6b115;
+  background-color: #ffd65d3e;
+}
+
+.text-similiry-tertiary {
+  color: #777;
+  background-color: #77777716;
+}
+
+.ia-info-container {
+  display: flex;
+  border-radius: 18px;
+  width: fit-content;
+  padding: 0px 5px;
+  border-right: dotted;
+  border-right: 3px dotted var(--color-primary);
+  align-items: center;
+  animation: xray 3s ease infinite;
+}
+
+/* --------------------------------------- */
+
+.loaderContXray {
+  width: auto;
+  -webkit-animation: loandingXrayAnimation 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: loandingXrayAnimation 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes loandingXrayAnimation {
+  0% { opacity: 0; }
+  30% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes loandingXrayAnimation {
+  0% { opacity: 0; }
+  30% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.loaderContXray_hidden {
+  opacity: 0;
+  width: 0;
+}
+
+/* --------------------------------------------------- */
+
+.previewContXray {
+  -webkit-animation: previewContXrayAnimation 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: previewContXrayAnimation 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes previewContXrayAnimation {
+  0% { opacity: 0; width: 0; }
+  30% { opacity: 0; width: auto; }
+  100% { opacity: 1; width: auto;}
+}
+@keyframes previewContXrayAnimation {
+  0% { opacity: 0; width: 0; }
+  30% { opacity: 0; width: auto; }
+  100% { opacity: 1; width: auto;}
+}
+
+.previewContXray_hidden {
+  opacity: 0;
+  width: 0;
+}
+
+/* ---------------------------------------------------------------- */
+
+.clearBtnXray {
+  -webkit-animation: clearBtnXrayAnimation 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: clearBtnXrayAnimation 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes clearBtnXrayAnimation {
+  0% { opacity: 0; }
+  60% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+@keyframes clearBtnXrayAnimation {
+  0% { opacity: 0; }
+  60% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* ------------------------------------------------------------------- */
+
+.tableProductsXray {
+  -webkit-animation: tableProductsXrayAnimation 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: tableProductsXrayAnimation 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes tableProductsXrayAnimation {
+  0% { opacity: 0; }
+  80% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+@keyframes tableProductsXrayAnimation {
+  0% { opacity: 0; }
+  80% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* ================== X-Ray =============================== */
+/* ======================================================== */
+
