@@ -16,5 +16,4 @@ type cardRedirect = {
 
 export type cardsPropType = {
   card: cardType
-  index: number
 }

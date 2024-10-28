@@ -9,7 +9,7 @@ export default withAuth({
 export const config = {
   matcher: [
     // Protect all routes except for the root page ('/')
-    //'/home',
+    '/home',
     "/dashboard/:path*",
     // Exclude these routes from middleware protection
     "/((?!api|auth|_next|static|favicon.ico|).*)",

@@ -7,7 +7,7 @@ import React from 'react'
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-export const ToolsCard = ({ card }: cardsPropType) => {
+const ToolsCard = ({ card }: cardsPropType) => {
   const t = useTranslations('cards')
 
   const { title, subtitle, redirect, isActive, features } = card
@@ -50,3 +50,5 @@ export const ToolsCard = ({ card }: cardsPropType) => {
     </article>
   )
 }
+
+export default ToolsCard

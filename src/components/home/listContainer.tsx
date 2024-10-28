@@ -1,7 +1,9 @@
 'use client'
 
+import dynamic from 'next/dynamic'
+const ToolsCard = dynamic(() => import('@/components/home/toolsCard'), { ssr: false })
+
 import React from 'react'
-import { ToolsCard } from '@/components/home/toolsCard'
 import { cards } from '@/utils/homeCardsList'
 
 export const ListContainer = () => {
@@ -9,7 +11,7 @@ export const ListContainer = () => {
     <div className='relative cardsListContainer w-full flex p-3 flex-wrap gap-1'>
       {
         cards.map((card, idx) => (
-          <ToolsCard card={card} key={idx} index={idx} />
+          <ToolsCard card={card} key={idx} />
         ))
       }
     </div>

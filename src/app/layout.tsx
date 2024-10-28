@@ -52,6 +52,10 @@ export default async function RootLayout({
         <meta httpEquiv="Cache-Control" content="no-store" />
         <link rel="icon" href='/favicon.ico' />
         <script type="module" src="https://unpkg.com/cally" async></script>
+        {/* VIDEO TUTORIALS ID */}
+        <script src="https://fast.wistia.com/embed/medias/omkkq3l1gm.jsonp" async></script >
+        {/* VIDEO TUTORIALS SCRIPT */}
+        <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
       </head>
       <body
         className={`${InterSans.className} antialiased w-dvw h-dvh overflow-hidden flex`}
@@ -68,10 +72,6 @@ export default async function RootLayout({
           {children}
         </NextIntlClientProvider>
       </body>
-      {/* VIDEO TUTORIALS ID */}
-      <script src="https://fast.wistia.com/embed/medias/omkkq3l1gm.jsonp" async></script >
-      {/* VIDEO TUTORIALS SCRIPT */}
-      <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
     </html>
   );
 }
